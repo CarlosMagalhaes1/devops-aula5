@@ -1,15 +1,15 @@
 def inicializar():
-       Guia = [ ]
-       para i no intervalo(3):
-               linha = [ ]
-               para j na faixa(3):
-                       linha. apêndice(".)
-               tab. apêndice(linha)
-       guia de retorno
+	tab = [ ]
+	for i in range(3):
+		linha = [ ]
+		for j in range(3):
+			linha.append(".")
+		tab.append(linha)
+	return tab
 
-def principal( ):
-    jogo = inicializar( )
-    impressão (jogo)
+def main( ):
+	jogo = inicializar( )
+	print (jogo)
 
-se _name_ == "_main_":
-        Principal()
+if _name_ == "_main_":
+	main()

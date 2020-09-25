@@ -1,20 +1,20 @@
-importação jogovelha
-importação sys
+import jogovelha
+import sys
 
-erroInicializar = Falso
-jogovelha  . inicializar()
+erroInicializar = False
+jogo = jogovelha.inicializar()
 
-se len(jogo) != 3:
-        erroInicializar = True
-outra coisa:
-        para linha no jogo:
-                se len(linha) != 3:
-                        erroInicializar = True
-                outra coisa:
-                        para elemento em linha:
-                                se elemento != '.':
-                                        erroInicializar = True
-se erroInicializar:
-        sys. saída(1)
-outra coisa:
-        sys. saída(0)
+if len(jogo) != 3:
+	erroInicializar = True
+else:
+	for linha in jogo:
+		if len(linha) != 3:
+			erroInicializar = True
+		else:
+			for elemento in linha:
+				if elemento != '.':
+					erroInicializar = True
+if erroInicializar:
+	sys.exit(1)
+else:
+	sys.exit(0)
